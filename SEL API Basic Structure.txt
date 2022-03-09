@@ -1,0 +1,55 @@
+SEL API 
+JSON Returned
+
+units
+	success:bool
+	message:string
+	now:datetime
+	units
+		name:string
+		id: int
+		last_update: datetime
+	
+	
+
+data - only 1 interface can be called at a time, so pull IDs from units and iterate through them. 
+	success:bool
+	message:string
+	now:datetime
+	details
+		name:string
+		last_update: datetime
+		tz: string (timezone)
+		update_cycle: int
+	blocks
+		name: sring
+		last_update: datetime
+		mode: int
+		analogs
+			aid: int
+			name: string
+			units: string
+			value: int
+			recharge: int
+			cycle_pulses: float
+			start: float
+			stop: float
+			dp: int
+		alarms
+			aid: int
+			status: int
+			type: int
+			name: string
+			last_change: datetime
+			healthy_name: string
+			faulty_name: string
+			pulse_total: float
+			pulse_units: string
+		outputs
+			oid: int
+			status: int
+			name: string
+			mode: int
+			last_update: datetime
+			high_state: string
+			low_state: string
